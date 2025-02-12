@@ -31,9 +31,9 @@ function showHidePara() {
 const changeBtnText = () => {
     const clickBtn = document.getElementById('clickBtn');
 
-    if (clickBtn.innerHTML === "Clicked"){
+    if (clickBtn.innerHTML === "Clicked") {
         clickBtn.innerHTML = "Click me";
-    }else{
+    } else {
         clickBtn.innerHTML = "Clicked"
     }
 }
@@ -49,3 +49,29 @@ function changeBoxColor() {
         box.innerHTML = 'This is the Gray color Box';
     }
 }
+
+document.getElementById('myInput').addEventListener("focus", function () {
+    const input = document.getElementById('myInput');
+    input.style.backgroundColor = 'red'
+
+})
+document.getElementById('myInput').addEventListener("blur", function () {
+    const input = document.getElementById('myInput');
+    input.style.backgroundColor = 'white'
+
+});
+
+// Change Event //
+
+document.getElementById('changeInputTest').addEventListener("change" , function (){
+    document.getElementById("outputText").textContent = this.value;
+
+})
+
+// Submit //
+
+document.getElementById('submitForm').addEventListener("submit" , function (e){
+    e.preventDefault();
+    console.log("Form Submitted!")
+
+})

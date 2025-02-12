@@ -25,17 +25,26 @@ let votes = 0;
 
 // ondbl click
 
-const changeclr = () => {
+// const changeclr = () => {
+//     const btn = document.getElementById('btn');
+//     if(
+//         btn.style.color === 'red'
+//     ){
+//         btn.style.color = 'blue';
+//     }
+//     else{
+//         btn.style.color = 'red';
+//     }
+// }
+document.getElementById('btn').addEventListener("click" , function (){
     const btn = document.getElementById('btn');
-    if(
-        btn.style.color === 'red'
-    ){
+    if(btn.style.color === 'red'){
         btn.style.color = 'blue';
     }
     else{
         btn.style.color = 'red';
     }
-}
+})
 
 // on key press
 
@@ -50,4 +59,5 @@ const keypress = () => {
     else{
         box.style.backgroundcolor = 'yellow';
     }
-}   
+}
+
