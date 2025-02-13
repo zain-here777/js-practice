@@ -21,9 +21,18 @@
         }
     </style> -->
     <style>
-        #formdata{
+        #form{
             font-size: 20px;
             padding: 30px;
+        }
+        #name{
+            background-color: white;
+        }
+        #mail{
+            background-color: white;
+        }
+        #password{
+            background-color: white;
         }
     </style>
 </head>
@@ -44,17 +53,23 @@
     <button onclick="vote('down')">Down vote</button> <br> -->
 
 <!-- on dblclick -->
-<!-- <button id="btn" ondblclick="changeclr()">dbl click me</button><br> -->
-<button id="btn">dbl click me</button><br>
+<!-- <button id="btn" ondblclick="changeclr()">dbl click me</button><br>
+<button id="btn">dbl click me</button><br> -->
 
 
 <!-- on key press -->
 
-<div id="box"><p>introduce urslf</p></div>
-<button id="key" onkeypress="keypress()">key press</button>
+<!-- <div id="box"><p>introduce urslf</p></div>
+<button id="key" onkeypress="keypress()">key press</button> -->
 
+<!-- form events -->
 
-
+<form id="form">
+    <input type="text" id="name" placeholder="name"><br>
+    <input type="text" id="mail" placeholder="email" required><br>
+    <input type="password" id="password" placeholder="password" required><br>
+    <button>sumbit</button>
+</form>
 
 
 
