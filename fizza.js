@@ -36,21 +36,28 @@
 //         btn.style.color = 'red';
 //     }
 // }
+document.getElementById('btn').addEventListener("click" , function (){
+    const btn = document.getElementById('btn');
+    if(btn.style.color === 'red'){
+        btn.style.color = 'blue';
+    }
+    else{
+        btn.style.color = 'red';
+    }
+})
 
 // on key press
 
-// const keypress = () => {
-//     const box = document.getElementById('box');
-//     if (
-//         box.style.backgroundColor === 'yellow'
-//     )
-//     {
-//         box.style.backgroundColor = 'green';
-//     }
-//     else{
-//         box.style.backgroundColor = 'yellow';
-//     }
-// }   
-
-// form events
+const keypress = () => {
+    const box = document.getElementById('box');
+    if (
+        box.style.backgroundcolor === 'yellow'
+    )
+    {
+        box.style.backgroundcolor = 'green';
+    }
+    else{
+        box.style.backgroundcolor = 'yellow';
+    }
+}
 
