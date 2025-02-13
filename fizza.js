@@ -12,42 +12,45 @@
 
 // on click event
 
-let votes = 0;
-        const vote = (action) => {
-            if (action === "up") {
-                votes++;
-            } else if (action === "down") {
-                votes--;
-            }
-            document.getElementById("voteCount").innerHTML = "Votes: " + votes;
-        }
+// let votes = 0;
+//         const vote = (action) => {
+//             if (action === "up") {
+//                 votes++;
+//             } else if (action === "down") {
+//                 votes--;
+//             }
+//             document.getElementById("voteCount").innerHTML = "Votes: " + votes;
+//         }
 
 
 // ondbl click
 
-const changeclr = () => {
-    const btn = document.getElementById('btn');
-    if(
-        btn.style.color === 'red'
-    ){
-        btn.style.color = 'blue';
-    }
-    else{
-        btn.style.color = 'red';
-    }
-}
+// const changeclr = () => {
+//     const btn = document.getElementById('btn');
+//     if(
+//         btn.style.color === 'red'
+//     ){
+//         btn.style.color = 'blue';
+//     }
+//     else{
+//         btn.style.color = 'red';
+//     }
+// }
 
 // on key press
 
-const keypress = () => {
-    const box = document.getElementById('box');
-    if (
-        box.style.backgroundcolor === 'yellow'
-    )
-    {
-        box.style.backgroundcolor = 'green';
-    }
-    else{
-        box.style.backgroundcolor = 'yellow';
-    }
-}   
+// const keypress = () => {
+//     const box = document.getElementById('box');
+//     if (
+//         box.style.backgroundColor === 'yellow'
+//     )
+//     {
+//         box.style.backgroundColor = 'green';
+//     }
+//     else{
+//         box.style.backgroundColor = 'yellow';
+//     }
+// }   
+
+// form events
+
