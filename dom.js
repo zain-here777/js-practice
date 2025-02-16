@@ -74,4 +74,19 @@ document.getElementById('submitForm').addEventListener("submit" , function (e){
     e.preventDefault();
     console.log("Form Submitted!")
 
-})
+});
+
+
+// Data Types //
+
+const car = {
+    name : 'Elantra',
+    modal : 2025,
+    isAvailable : true,
+    color:'Black',
+    carFunction : function (){
+        console.log('This is my car and its name is ' + this.name)
+    }
+}
+
+console.log(car.carFunction())
