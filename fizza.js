@@ -111,3 +111,62 @@ document.getElementById('password') .addEventListener("blur" , function(){
     const pass = document.getElementById('password');
     pass.style.backgroundColor = 'white';
 });
+
+
+//objects
+
+function merge(obj1 , obj2){
+    return Object.assign({} , obj1 , obj2);
+}
+const obj1 = {
+    name : 'fizza',
+    age : 21,
+};
+const obj2 = {
+    color : 'blue',
+    height : 5.6,
+};
+console.log(merge(obj1 , obj2));
+
+
+const book = {
+    title : 'jannat kay pattay',
+    author : 'Nemrah Ahmed',
+    year : 2012,
+};
+Object.values(book).forEach(value => {
+    console.log(value);
+});
+
+
+//events
+
+// resize
+
+window.addEventListener("resize" , function(){
+if (window.innerWidth < 768) {
+    console.log ('this is for tablets');
+} else{
+    console.log ('this is for laptops');
+}
+});
+
+window.addEventListener("resize", function() {
+    if (window.innerWidth < 786) {
+        document.body.style.background = "lightblue"; 
+    } else {
+        document.body.style.background = "lightgray"; 
+    }
+});
+
+
+// on load
+
+window.onload = function() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("content").style.display = "block";
+};
+
+// on scroll
+
+
