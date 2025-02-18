@@ -63,51 +63,51 @@
 
 // form events
 
-document.getElementById('form') .addEventListener("submit" , function(){
+document.getElementById('form').addEventListener("submit", function () {
     alert('form submitted');
 });
-document.getElementById('name') .addEventListener("input" , function(){
+document.getElementById('name').addEventListener("input", function () {
     console.log('input');
 });
-document.getElementById('name') .addEventListener("change" , function(){
+document.getElementById('name').addEventListener("change", function () {
     const self = document.getElementById('name');
     self.style.backgroundColor = 'lightblue';
 });
-document.getElementById('name') .addEventListener("focus" , function(){
+document.getElementById('name').addEventListener("focus", function () {
     const self = document.getElementById('name');
     self.style.backgroundColor = 'lightgray';
 });
-document.getElementById('name') .addEventListener("blur" , function(){
+document.getElementById('name').addEventListener("blur", function () {
     const self = document.getElementById('name');
     self.style.backgroundColor = 'white';
 });
-document.getElementById('mail') .addEventListener("input" , function(){
+document.getElementById('mail').addEventListener("input", function () {
     console.log('input');
 });
-document.getElementById('mail') .addEventListener("change" , function(){
+document.getElementById('mail').addEventListener("change", function () {
     const self = document.getElementById('mail');
     self.style.backgroundColor = 'lightblue';
 });
-document.getElementById('mail') .addEventListener("focus" , function(){
+document.getElementById('mail').addEventListener("focus", function () {
     const self = document.getElementById('mail');
     self.style.backgroundColor = 'lightgray';
 });
-document.getElementById('mail') .addEventListener("blur" , function(){
+document.getElementById('mail').addEventListener("blur", function () {
     const self = document.getElementById('mail');
     self.style.backgroundColor = 'white';
 });
-document.getElementById('password') .addEventListener("input" , function(){
+document.getElementById('password').addEventListener("input", function () {
     console.log('input');
 });
-document.getElementById('password') .addEventListener("change" , function(){
+document.getElementById('password').addEventListener("change", function () {
     const self = document.getElementById('password');
     self.style.backgroundColor = 'lightblue';
 });
-document.getElementById('password') .addEventListener("focus" , function(){
+document.getElementById('password').addEventListener("focus", function () {
     const pass = document.getElementById('password');
     pass.style.backgroundColor = 'lightgray';
 });
-document.getElementById('password') .addEventListener("blur" , function(){
+document.getElementById('password').addEventListener("blur", function () {
     const pass = document.getElementById('password');
     pass.style.backgroundColor = 'white';
 });
@@ -115,24 +115,24 @@ document.getElementById('password') .addEventListener("blur" , function(){
 
 //objects
 
-function merge(obj1 , obj2){
-    return Object.assign({} , obj1 , obj2);
-}
+
 const obj1 = {
-    name : 'fizza',
-    age : 21,
+    name: 'fizza',
+    age: 21,
 };
 const obj2 = {
-    color : 'blue',
-    height : 5.6,
+    color: 'blue',
+    height: 5.6,
 };
-console.log(merge(obj1 , obj2));
+
+const combinedObj = {...obj1, ...obj2};
+console.log(combinedObj);
 
 
 const book = {
-    title : 'jannat kay pattay',
-    author : 'Nemrah Ahmed',
-    year : 2012,
+    title: 'jannat kay pattay',
+    author: 'Nemrah Ahmed',
+    year: 2012,
 };
 Object.values(book).forEach(value => {
     console.log(value);
@@ -143,30 +143,46 @@ Object.values(book).forEach(value => {
 
 // resize
 
-window.addEventListener("resize" , function(){
-if (window.innerWidth < 768) {
-    console.log ('this is for tablets');
-} else{
-    console.log ('this is for laptops');
-}
-});
-
-window.addEventListener("resize", function() {
-    if (window.innerWidth < 786) {
-        document.body.style.background = "lightblue"; 
+window.addEventListener("resize", function () {
+    if (window.innerWidth < 576) {
+        console.log('this is for tablets');
+        document.body.style.background = "red";
+    } else if (window.innerWidth < 768) {
+        console.log('this is for mobile');
+        document.body.style.background = "lightblue";
     } else {
-        document.body.style.background = "lightgray"; 
+        console.log('this is for laptops');
+        document.body.style.background = "lightgray";
     }
 });
 
-
 // on load
 
-window.onload = function() {
+window.onload = function () {
     document.getElementById("loader").style.display = "none";
     document.getElementById("content").style.display = "block";
 };
+// setTimeout(() => {
+//     document.getElementById("loader").style.display = "none";
+//     document.getElementById("content").style.display = "block";
+// }, 5000)
 
 // on scroll
+
+console.log("Before timeout");
+
+setTimeout(() => {
+    console.log("Hello after 3 seconds!");
+}, 5000);
+
+console.log("After timeout");
+
+
+let count = 1;
+
+const intervalId = setInterval(() => {
+    console.log("Count:", count);
+    count++; // Increase count by 1
+}, 1000); // Runs every 1000ms (1 second)
 
 
