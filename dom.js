@@ -63,14 +63,14 @@ document.getElementById('myInput').addEventListener("blur", function () {
 
 // Change Event //
 
-document.getElementById('changeInputTest').addEventListener("change" , function (){
+document.getElementById('changeInputTest').addEventListener("change", function () {
     document.getElementById("outputText").textContent = this.value;
 
 })
 
 // Submit //
 
-document.getElementById('submitForm').addEventListener("submit" , function (e){
+document.getElementById('submitForm').addEventListener("submit", function (e) {
     e.preventDefault();
     console.log("Form Submitted!")
 
@@ -80,13 +80,32 @@ document.getElementById('submitForm').addEventListener("submit" , function (e){
 // Data Types //
 
 const car = {
-    name : 'Elantra',
-    modal : 2025,
-    isAvailable : true,
-    color:'Black',
-    carFunction : function (){
+    name: 'Elantra',
+    modal: 2025,
+    isAvailable: true,
+    color: 'Black',
+    carFunction: function () {
         console.log('This is my car and its name is ' + this.name)
     }
 }
 
 console.log(car.carFunction())
+
+// const obj  = {a : 'JS'};
+// const {a , a:b , a:c} = obj;
+//
+// console.log(a, b, c);
+
+const person = {
+    name: 'Person',
+    age: 35,
+    email: 'email@email.com',
+    phone: 454343434,
+    designation: 'Software Engineering',
+}
+
+const {name, phone , email} = person;
+
+console.log(phone);
+console.log(email);
+console.log(name);

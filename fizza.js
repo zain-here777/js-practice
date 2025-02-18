@@ -206,10 +206,10 @@ window.addEventListener("resize", function () {
 
 // on load
 
-window.onload = function () {
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("content").style.display = "block";
-};
+// window.onload = function () {
+//     document.getElementById("loader").style.display = "none";
+//     document.getElementById("content").style.display = "block";
+// };
 // setTimeout(() => {
 //     document.getElementById("loader").style.display = "none";
 //     document.getElementById("content").style.display = "block";
