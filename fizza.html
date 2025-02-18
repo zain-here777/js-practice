@@ -51,6 +51,31 @@
             display: none;
         }
       
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #calculator {
+            width: 200px;
+            margin: auto;
+            padding: 40px;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+        input {
+            width: 90%;
+            margin-bottom: 15px;
+            padding: 15px;
+            text-align: right;
+        }
+        button {
+            width: 45px;
+            height: 45px;
+            margin: 5px;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
@@ -81,24 +106,56 @@
 
 <!-- form events -->
 
-<form id="form">
-    <input type="text" id="name" placeholder="name"><br>
+<!-- <form id="form"> -->
+    <!-- <input type="text" id="name" placeholder="name"><br>
     <input type="text" id="mail" placeholder="email" required><br>
     <input type="password" id="password" placeholder="password" required><br>
     <button>sumbit</button>
 </form>
 
-<!-- on load -->
+ on load -->
 
-<div id="loader">Loading...</div>
+<!-- <div id="loader">Loading...</div>
 
     <div id="content">
         <h1>Welcome to My Website</h1>
         <p>The page has fully loaded!</p>
-    </div>
+    </div> --> 
 
-<!-- on scroll -->
+<!-- calculator -->
 
+<div id="calculator">
+    <input type="text" id="display" disabled>
+    <br>
+    <button onclick="clearDisplay()">C</button>
+    <br>
+    
+    <button onclick="appendValue('1')">1</button>
+    <button onclick="appendValue('2')">2</button>
+    <button onclick="appendValue('3')">3</button>
+    <br>
+    
+    <button onclick="appendValue('4')">4</button>
+    <button onclick="appendValue('5')">5</button>
+    <button onclick="appendValue('6')">6</button>
+    <br>
+    
+    <button onclick="appendValue('7')">7</button>
+    <button onclick="appendValue('8')">8</button>
+    <button onclick="appendValue('9')">9</button>
+    <br>
+    
+    <button onclick="appendValue('0')">0</button>
+    <br>
+
+    <button onclick="appendValue('*')">*</button>
+    <button onclick="appendValue('-')">-</button>
+    <button onclick="appendValue('+')">+</button>
+    <br>
+
+    <button onclick="appendValue('/')">/</button>
+    <button onclick="calculate()">=</button>
+</div>
 
 
 
